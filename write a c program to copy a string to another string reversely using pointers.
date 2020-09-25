@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<string.h>
+void reverse(char* );
+
+int main()
+{
+    char x[100],y[100];
+    gets(x);
+    reverse(x);
+    int i=0;
+    while(x[i]!='\0')
+    {
+        y[i]=x[i];
+        i++;
+    }
+    y[i]='\0';
+    printf("%s",y);
+}
+
+void reverse(char* x)
+{
+    char *start,*end, ch;
+    int l,i;
+    l=strlen(x);
+    start= x;
+    end= x;
+
+
+    for(i=0;i<l-1;i++)
+        end++;
+
+    for(i=0;i<(l/2);i++)
+    {
+        ch= *end;
+        *end= *start;
+        *start = ch;
+
+        start++;
+        end--;
+    }
+}
+
+
