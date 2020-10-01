@@ -9,7 +9,7 @@ int main()
      /* Opening a file in r mode*/
      fp1= fopen ("C:/text/symum.txt", "r");
 
-     /* Infinite loop –I have used break to come out of the loop*/
+     /* Infinite loop â€“I have used break to come out of the loop*/
      while(1)
      {
         c = fgetc(fp1);
