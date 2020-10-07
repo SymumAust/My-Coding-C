@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    char alphabet[199];
+    gets(alphabet);
+    int i=0;
+    while(alphabet[i]!='\0')
+    {
+        sos:
+        if(alphabet[i]>='a' && alphabet[i]<='z' || alphabet[i]>='A' && alphabet[i]<='Z')
+        {
+           i=i+1;
+           goto sos;
+        }
+        printf("%c",alphabet[i]);
+        i++;
+    }
+    printf("\n");
+    return 0;
+}
